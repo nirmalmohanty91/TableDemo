@@ -1,0 +1,51 @@
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <mat-input-container class="fullwidth">
+                    <input type="text" id="firstname" matInput placeholder="First Name" [(ngModel)]="address.firstname" name="firstname">
+                </mat-input-container>
+            </td>
+            <td>
+                <mat-input-container class="fullwidth">
+                    <input type="text" id="lastname" matInput placeholder="Last Name" [(ngModel)]="address.lastname" name="lastname">
+                </mat-input-container>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        <mat-input-container class="fullwidth">
+            <textarea id="address" matInput placeholder="Address" [(ngModel)]="address.address" name="address"></textarea>
+        </mat-input-container>
+    </p>
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <mat-input-container class="fullwidth">
+                    <input type="text" id="city" matInput placeholder="City" [(ngModel)]="address.city" name="city">
+                </mat-input-container>
+            </td>
+            <td>
+                <mat-input-container class="fullwidth">
+                    <input type="text" id="state" matInput placeholder="State" [(ngModel)]="address.state" name="state">
+                </mat-input-container>
+            </td>
+            <td>
+                <mat-input-container class="fullwidth">
+                    <input type="text" id="postalcode" matInput maxlength="5" #postalcode placeholder="Postal Code" [(ngModel)]="address.postalcode" name="postalcode">
+                    <mat-hint align="end">
+                        {{postalcode.value.length}} / 5
+                    </mat-hint>
+                </mat-input-container>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+    <p>
+        <button type="submit" mat-raised-button>Submit</button>
+    </p>
+</form>
