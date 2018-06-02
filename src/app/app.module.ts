@@ -1,51 +1,63 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import 'hammerjs';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule} from '@angular/forms';
-import { MatInputModule, MatButtonModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatCardModule} from '@angular/material/card';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { DealerOnboarding } from './DealerOnboarding/dealerOnboarding';
-import { MyFormComponent } from './my-form/my-form.component';
-import { MenudemoComponent } from './menudemo/menudemo.component';
-import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
-import { MyDialogComponent } from './my-dialog/my-dialog.component';
-import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
-import { SnackbarDemoComponent } from './snackbar-demo/snackbar-demo.component';
-import { SidenavdemoComponent } from './sidenavdemo/sidenavdemo.component';
-import { ToobardemoComponent } from './toobardemo/toobardemo.component';
 
-
-
+import { FixedsidenavdemoComponent } from './fixedsidenavdemo/fixedsidenavdemo.component';
+import { TabledetailsComponent } from './tabledetails/tabledetails.component';
+import { CreateTableComponent } from './create-table/create-table.component';
+import { RouterModule } from '@angular/router';
+import {routes} from './app.route';
+import { CreateTemplateComponent } from './create-template/create-template.component';
+import { DataTransferService } from './data-transfer.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DealerOnboarding,
-    MyFormComponent,
-    MenudemoComponent,
-    DialogDemoComponent,
-    MyDialogComponent,
-    TooltipDemoComponent,
-    SnackbarDemoComponent,
-    SidenavdemoComponent,
-    ToobardemoComponent
-    
+    FixedsidenavdemoComponent,
+    TabledetailsComponent,   
+    CreateTableComponent, CreateTemplateComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     FormsModule,
     MatInputModule,
@@ -58,13 +70,78 @@ import { ToobardemoComponent } from './toobardemo/toobardemo.component';
     MatMenuModule,
     MatIconModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatStepperModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    RouterModule
+    
 
   ],
   entryComponents: [
-    MyDialogComponent
+    
   ],
-  providers: [],
+  providers: [DataTransferService],
   bootstrap: [
     AppComponent
   ]

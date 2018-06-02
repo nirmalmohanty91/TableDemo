@@ -1,0 +1,15 @@
+<ng-container>
+    <mat-toolbar class="example-header">Dealer Onboarding</mat-toolbar>
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+            <button type="submit" mat-raised-button [routerLink]="['/createScreen']" style="width: 100%; border-style: solid; border-width: 1px; border-color:rgba(0, 0, 0, .32)">Create Screen</button>
+            <button type="submit" mat-raised-button (click)="showTemplates()" [routerLink]="['/createTemplate']" style="width: 100%; border-style: solid; border-width: 1px; border-color:rgba(0, 0, 0, .32)">Create Template</button>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <mat-toolbar class="example-footer">Footer</mat-toolbar>
+</ng-container>

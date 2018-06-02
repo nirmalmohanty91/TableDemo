@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TooltipDemoComponent } from './tooltip-demo.component';
+import { CreateTableComponent } from './create-table.component';
 
-describe('TooltipDemoComponent', () => {
-  let component: TooltipDemoComponent;
-  let fixture: ComponentFixture<TooltipDemoComponent>;
+describe('CreateTableComponent', () => {
+  let component: CreateTableComponent;
+  let fixture: ComponentFixture<CreateTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TooltipDemoComponent ]
+      declarations: [ CreateTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TooltipDemoComponent);
+    fixture = TestBed.createComponent(CreateTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,30 @@
+<div>
+    <mat-card style="margin:10%; padding:0px; height: 400px;">
+        <mat-toolbar style="background: #3f51b5; color: white">
+            <span>Create Screen</span>
+        </mat-toolbar>
+
+        <mat-card-content style="margin:10%; margin-top: 31px;">
+            <!--<form class="formwidth" #myForm="ngForm">-->
+
+            <mat-form-field class="fullwidth">
+                <input type="text" id="tableName" matInput placeholder="Screen Name" [(ngModel)]="tableDetails.tableName" name="tableName" required #inputElement1 (keyup)="0">
+            </mat-form-field>
+            <mat-form-field class="fullwidth">
+                <input type="text" id="noOfColumns" matInput placeholder="Number Of Columns" [(ngModel)]="tableDetails.noOfColumns" name="noOfColumns" required #inputElement2 (keyup)="0">
+            </mat-form-field>
+            <mat-form-field class="fullwidth">
+                <textarea id="description" matInput placeholder="Description" [(ngModel)]="tableDetails.description" name="description"></textarea>
+            </mat-form-field>
+            <div style="text-align: right">
+                <button type="submit" color="primary" (click)="onSubmit()" mat-raised-button [disabled]="inputElement1.value.length && inputElement2.value.length == 0">Next</button>
+                <!--<button type="submit" color="primary" [routerLink]="['/createTable']" mat-raised-button [disabled]="inputElement1.value.length && inputElement2.value.length == 0">Next</button>-->
+
+                <button type="reset" color="primary" mat-raised-button>Cancel</button>
+            </div>
+            <!--</form>-->
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<router-outlet></router-outlet>

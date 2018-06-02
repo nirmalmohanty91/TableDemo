@@ -1,0 +1,45 @@
+<mat-card *ngIf=true style="margin:10%; padding:0px; height: 430px; left: -2%; overflow-y: scroll">
+
+    <!--<h3> Enter Table Details</h3>-->
+    <mat-toolbar style="background: #3f51b5; color: white">
+
+        <!--<span>{{tableDetails.tableName}}:{{tableDetails.noOfColumns}}</span><br>-->
+        <span>{{dataTransfer.tableDetailsService.tableName}}</span>
+        <!--<mat-form-field>
+            <input matInput placeholder="Table Name" #mobile name="tableName" value="{{incomingData.tableName}}">
+        </mat-form-field>
+         
+        <mat-form-field>
+            <input matInput placeholder="Table Name" name="doesntmatter" value="{{mobile.value}}">
+        </mat-form-field>-->
+    </mat-toolbar>
+    <mat-card-content style="margin:10%; margin-top: 31px;">
+
+        <div *ngFor="let number of columns">
+            <div>
+                <mat-form-field>
+                    <input matInput placeholder="Header Name" name="columnName">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select placeholder="Data Type">
+                        <mat-option *ngFor="let dataType of dataTypes" [value]="dataType.value">
+                            {{ dataType.viewValue }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-checkbox>Editable</mat-checkbox>
+            </div>
+        </div>
+        <!--<div>
+
+            <li *ngFor="let number of [0,1,2,3,4]">{{number}}</li>
+
+        </div>-->
+        <div style="text-align: right">
+            <button type="submit" color="primary" mat-raised-button>Create</button>
+            <button type="reset" color="primary" mat-raised-button>Cancel</button>
+        </div>
+
+    </mat-card-content>
+
+</mat-card>
